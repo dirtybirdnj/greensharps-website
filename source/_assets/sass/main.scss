@@ -4,6 +4,11 @@
 @import "~highlight.js/scss/a11y-dark";
 @import "~notyf/notyf.min";
 
+#headerText {
+    font-size: 3em;
+    font-family: 'Work Sans', sans-serif;
+}
+
 section h1:first-child {
     margin-top: 18px;
 }

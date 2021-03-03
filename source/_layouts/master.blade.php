@@ -13,17 +13,21 @@
     @include('_partials.head.favicon')
     @include('_partials.head.meta')
     @include('_partials.cms.identity_widget')
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 </head>
 <body>
     <section>
         <header>
             <nav>
-                <strong>{{ $page->site->title }}</strong><br>
+                <strong id="headerText">{{ $page->site->title }}</strong><br>
+                <small><i>{{ $page->site->description }}</i></small><br>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/posts">Posts</a></li>
+                    <li><a href="/values">Values</a></li>
+                    <li><a href="/posts">Blog</a></li>
+                    <li><a href="/jobs">Jobs</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
@@ -37,11 +41,9 @@
         </article>
 
         <footer>
-            <small>
-                &copy; <span data-year></span> {{ $page->owner->name }} &nbsp;&bull;&nbsp;
-                <a href="/feed.atom">RSS</a> &nbsp;&bull;&nbsp;
-                Maintained by Ranie Santos &nbsp;&bull;&nbsp;
-                <a href="https://github.com/raniesantos/artisan-static">GitHub repo</a>.
+        <small>
+                Greensharps &copy; <span data-year></span> <a href="https://www.vtapi.co" target="_blank">vtapi.co</a> &nbsp;&bull;&nbsp;
+                <a href="/colophon">Colophon</a>
             </small>
         </footer>
     </section>
